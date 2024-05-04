@@ -1,0 +1,20 @@
+# 3.4 Скрипты на bash: разное. Шаг 10
+# https://stepik.org/lesson/4771/step/10?thread=solutions&unit=1074
+# Выполнила Ермилова Вероника 33ИС-21
+
+# put your shell (bash) code here
+while true;do
+read a1 op a2
+if [ $a1 == "exit" ];then echo "bye";exit;fi
+case $op in
+ "+"|"-"|"/"|"%"|"*"|"**")
+ echo $(($a1${op}$a2))
+ ;;
+ *)
+ echo "error";exit
+ ;;
+esac
+done
+
+
+
